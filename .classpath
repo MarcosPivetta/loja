@@ -18,7 +18,7 @@
 	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/javax.annotation-api-1.2.jar"/>
 	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/javax.inject-2.2.0-b21.jar"/>
 	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/javax.ws.rs-api-2.0.jar"/>
-	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/jersey-container-grizzly2-http-2.4.1.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/jersey-container-grizzly2-http-2.4.1.jar" sourcepath="/home/pivetta/.m2/repository/org/glassfish/jersey/containers/jersey-container-grizzly2-http/2.4.1/jersey-container-grizzly2-http-2.4.1-sources.jar"/>
 	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/junit-4.9.jar"/>
 	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/osgi-resource-locator-1.0.1.jar"/>
 	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/validation-api-1.1.0.Final.jar"/>

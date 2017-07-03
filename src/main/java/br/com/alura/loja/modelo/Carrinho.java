@@ -50,7 +50,7 @@ public class Carrinho {
 	}
 	
 	public void remove(long id) {
-		for (Iterator iterator = produtos.iterator(); iterator.hasNext();) {
+		for (Iterator<Produto> iterator = produtos.iterator(); iterator.hasNext();) {
 			Produto produto = (Produto) iterator.next();
 			if(produto.getId() == id) {
 				iterator.remove();
@@ -64,7 +64,7 @@ public class Carrinho {
 	}
 
 	public void trocaQuantidade(Produto produto) {
-		for (Iterator iterator = produtos.iterator(); iterator.hasNext();) {
+		for (Iterator<Produto> iterator = produtos.iterator(); iterator.hasNext();) {
 			Produto p = (Produto) iterator.next();
 			if(p.getId() == produto.getId()) {
 				p.setQuantidade(produto.getQuantidade());
@@ -75,6 +75,10 @@ public class Carrinho {
 	
 	public List<Produto> getProdutos() {
 		return produtos;
+	}
+
+	public String toXML() {
+		return new XStream().toXML(this);
 	}
 
 }
