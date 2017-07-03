@@ -12,10 +12,10 @@ import br.com.alura.loja.modelo.Projeto;
 public class ProjetoResource {
 	
 	@GET
-	@Produces(MediaType.APPLICATION_XML)
+	@Produces(MediaType.APPLICATION_JSON)
 	public String busca() {
 		Projeto projeto = new ProjetoDAO().busca(1l);
-		return projeto.toXML();
+		return projeto.toJSON();
 		
 	}
 }
