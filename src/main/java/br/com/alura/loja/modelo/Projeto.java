@@ -1,10 +1,14 @@
 package br.com.alura.loja.modelo;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 import com.google.gson.Gson;
 import com.thoughtworks.xstream.XStream;
 
 public class Projeto {
-
+	private List<Projeto> projetos = new ArrayList<Projeto>();
 	private String nome;
 	private long id;
 	private int anoDeInicio;
@@ -42,6 +46,15 @@ public class Projeto {
 
 	public String toJSON() {
 		return new Gson().toJson(this);
+	}
+	
+	public void remove(long id) {
+		for (Iterator<Projeto> iterator = projetos.iterator(); iterator.hasNext();) {
+			Projeto projeto = (Projeto) iterator.next();
+			if(projeto.getId() == id) {
+				iterator.remove();
+			}
+		}
 	}
 
 }
